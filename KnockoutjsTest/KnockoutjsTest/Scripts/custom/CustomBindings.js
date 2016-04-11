@@ -45,3 +45,5 @@ ko.applyBindings(new SurveyViewModel("Which factors affect your technology choic
    "Totally believable testimonials on project homepage"
 ]));
 
+//Added a test comment
+
