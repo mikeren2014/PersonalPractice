@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="~/Scripts/knockout-3.4.0.js" type="text/javascript"></script>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div>
+        @Html.ActionLink("Introduction", "Introduction")
+        @Html.ActionLink("SinglePageApplications", "SinglePageApplications")
+        @Html.ActionLink("Lists And Collections", "ListsAndCollections")
+        @Html.ActionLink("Custom Bindings", "CustomeBindings")
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
