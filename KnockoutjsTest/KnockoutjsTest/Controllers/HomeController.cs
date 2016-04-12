@@ -38,6 +38,10 @@ namespace KnockoutjsTest.Controllers
             return View();
         }
 
+        public ActionResult LoadingAndSavingData()
+        {
+            return View();
+        }
 
         #region Helper Functions
 

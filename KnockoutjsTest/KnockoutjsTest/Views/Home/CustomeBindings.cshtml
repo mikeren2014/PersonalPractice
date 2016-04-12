@@ -2,6 +2,8 @@
 @{
     ViewBag.Title = "CustomeBindings";
 }
+<link href="~/Content/jquery-ui.css" rel="stylesheet" />
+<link href="~/Content/custombindings.css" rel="stylesheet" />
 <script src="~/Scripts/jquery-ui-1.11.4.js"></script>
 <h3 data-bind="text: question"></h3>
 <p>Please distribute <b data-bind="text: pointsBudget"></b> points between the following options.</p>
@@ -11,14 +13,14 @@
     <tbody data-bind="foreach: answers">
         <tr>
             <td data-bind="text: answerText"></td>
-            <td><select data-bind="options: [1,2,3,4,5], value: points"></select></td>
+            <td data-bind="starRating: points"></td>
         </tr>
     </tbody>
 </table>
 
 <h3 data-bind="fadeVisible: pointsUsed() > pointsBudget">You've used too many points! Please remove some.</h3>
 <p>You've got <b data-bind="text: pointsBudget - pointsUsed()"></b> points left to use.</p>
-<button data-bind="jqButton: true, enable: pointsUsed() <= pointsBudget, click: save">Finished</button>
+<div data-bind="jqButton: {enable: pointsUsed() <= pointsBudget}, click: save">Finished</div>
 
 
 <script src="~/Scripts/custom/CustomBindings.js"></script>

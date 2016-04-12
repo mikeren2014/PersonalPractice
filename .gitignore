@@ -4,3 +4,5 @@
 #exclude all things vs generates
 /*/*/bin/*
 /*/*/obj/*
+*.suo
+*.csproj.use
